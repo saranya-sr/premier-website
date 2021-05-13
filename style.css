@@ -1,35 +1,128 @@
 *
 {
-    margin: 0;
-    padding: 0;
+  padding: 0;
+  margin:0;
+  list-style: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
-body
-{
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- background-color: rgb(86, 182, 185);
- 
+body{
+    font-family: monospace;
 }
-img
-{
-    max-width: 100%;
+nav{
+    background: rgb(92, 145, 243);
     height: 80px;
+    width:100%;
 }
-table,th,td
-{
-    border: 1px solid black;
+
+nav img{
+  max-width: 100%;
+  height: 110px;
+  position:absolute;
+  left:12%;
 }
- /* mobile first approach */
- #intro{
-    border: 1px solid;
-    margin:1rem;
-    padding:1rem;
-    display: flex;
-    flex-direction: column;
-  /*   vertical axis */
-    align-items: center;
-  /* horizontal axis   */
-    justify-content:center
+label.logo{
+    color: white;
+    padding:0 100px;
+    line-height: 80px;
+}
+nav ul{
+    float:right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 100px;
+    margin:0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 20px;
+    padding:7px 13px;
+    border-radius: 3px;
+}
+a.active,a:hover{
+  background: #1b91bf;
+  transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float:right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
   }
-
-
+  #check{
+      display: none;
+  }
+  @media(max-width:952px){
+      label.logo{
+        font-size: 30px;
+        padding-left:50px;
+      }
+      nav ul li a{
+          font-size: 16px;
+      }
+  }
+  @media(max-width:858px){
+    .checkbtn{
+        display:block;
+    }
+    ul{
+      position:fixed;
+      width:100%;
+      height:100vh;
+      background: #2c3e50;
+      top:80px;
+      left:-100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color:teal;
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }
+  section{
+      background: url(images/cn6.jpg) no-repeat;
+    }
   
+/* .navbar{
+  background: rgb(72, 122, 216);
+  display: flex; */
+  /* display:inline-block; */
+  /* justify-content: space-between; */
+/* } */
+
+/* .navbar-container{
+  width:min(991px,80%);
+  margin: 0 auto;
+} */
+/* .navbar-logo img{
+  height:130px;
+  padding-left: 3rem;
+}
+.navbar-content{
+  display: flex;
+  justify-content:center;
+}
+.navbar-content ul{
+  display: flex;
+  justify-content: space-around;
+  width: 100ch;
+  align-items: center;
+} */
